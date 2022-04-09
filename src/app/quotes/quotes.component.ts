@@ -8,7 +8,11 @@ import { Quote } from '../quote';
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
-  
+  quotes:Quote[]=[
+    new Quote(1, 'First Quote',0,0),
+    new Quote(2, 'First Quote',0,0),
+    new Quote(3, 'First Quote',0,0)
+  ]
   constructor() { }
 
   ngOnInit(): void {
