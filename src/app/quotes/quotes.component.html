@@ -1,6 +1,6 @@
 <!-- <h2>Quotes</h2> -->
 <ul *ngFor = 'let quote of quotes' >
-    <li>{{quote.quote}}</li>
+    <li>{{quote.quote}}  <span class="text-primary"> <button>Upvotes</button> {{quote.upvotes}}</span> <span class="text-warning"> <button>Downvotes</button> {{quote.downvotes}}</span> </li>
 
 
 </ul>
