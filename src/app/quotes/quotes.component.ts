@@ -9,9 +9,9 @@ import { Quote } from '../quote';
 })
 export class QuotesComponent implements OnInit {
   quotes:Quote[]=[
-    new Quote(1, ' At the end of the day, whether or not those people are comfortable with how you’re living your life doesn’t matter. What matters is whether you’re comfortable with it','Teresiah', 'Dr Phil', 0,0),
-    new Quote(2, 'You are never too old to set another goal or to dream a new dream', 'Janet Wangui', ' Malala Yousafzai', 0,0),
-    new Quote(3, 'Spread love everywhere you go', 'Timmo Othiambo', 'Mother Teresa', 0,0)
+    new Quote(1, ' At the end of the day, whether or not those people are comfortable with how you’re living your life doesn’t matter. What matters is whether you’re comfortable with it','Teresiah', 'Dr Phil', 0,0,new Date(2020,4,1)),
+    new Quote(2, 'You are never too old to set another goal or to dream a new dream', 'Janet Wangui', ' Malala Yousafzai', 0,0,new Date(2020,4,1)),
+    new Quote(3, 'Spread love everywhere you go', 'Timmo Othiambo', 'Mother Teresa', 0,0,new Date(2020,4,1))
 
   ]
   addNewQuote(quotes:any){
