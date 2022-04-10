@@ -9,6 +9,7 @@ import { HighlightDirective } from './highlight.directive';
 import { FormComponent } from './form/form.component';
 import { FormsModule } from '@angular/forms';
 import { VotesComponent } from './votes/votes.component';
+import { PipeComponent } from './pipe/pipe.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { VotesComponent } from './votes/votes.component';
     NavbarComponent,
     HighlightDirective,
     FormComponent,
-    VotesComponent
+    VotesComponent,
+    PipeComponent
   ],
   imports: [
     BrowserModule,
