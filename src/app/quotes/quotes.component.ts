@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output,EventEmitter,Input } from '@angular/core';
 // import { Quote } from '@angular/compiler';
 import { Quote } from '../quote';
 
@@ -21,6 +21,16 @@ export class QuotesComponent implements OnInit {
     this.quotes.push(quotes)
     
   }
+  deleteQuote(isComplete:boolean, index:number){
+    if (isComplete) {
+      let toDelete = confirm("Are you sure you want to delete this Quote?")
+
+      if (toDelete){
+        this.quotes.splice(index,1)
+      }
+    }
+  }
+
   arr:number[] = this.quotes.map(quote=>quote.upvotes)
   highest = Math.max(...this.arr)
   constructor() { }
