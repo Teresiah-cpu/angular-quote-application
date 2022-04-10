@@ -1,12 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Pipe, PipeTransform } from '@angular/core';
 
-@Component({
-  selector: 'app-pipe',
-  templateUrl: './pipe.component.html',
-  styleUrls: ['./pipe.component.css']
+@Pipe({
+  name: 'countDate'
 })
-export class PipeComponent implements OnInit {
-  transform(value: any):number {
+export class CountDatePipe implements PipeTransform {
+transform(value: any):number {
     let today: Date = new Date();
     let todayWithNoTime: any = new Date(today.getFullYear(), today.getMonth(), today.getDate())
 
@@ -23,11 +21,6 @@ export class PipeComponent implements OnInit {
     } else {
       return 0;
     }
-  }
-
-  constructor() { }
-
-  ngOnInit(): void {
   }
 
 }

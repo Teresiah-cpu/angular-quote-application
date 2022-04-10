@@ -9,7 +9,8 @@ import { HighlightDirective } from './highlight.directive';
 import { FormComponent } from './form/form.component';
 import { FormsModule } from '@angular/forms';
 import { VotesComponent } from './votes/votes.component';
-import { PipeComponent } from './pipe/pipe.component';
+import { CountDatePipe } from './count-date.pipe';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PipeComponent } from './pipe/pipe.component';
     HighlightDirective,
     FormComponent,
     VotesComponent,
-    PipeComponent
+    CountDatePipe,
+    
   ],
   imports: [
     BrowserModule,
