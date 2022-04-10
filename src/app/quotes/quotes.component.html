@@ -2,12 +2,15 @@
 <div class="qtform ml-5">
     <div>
         <ul *ngFor='let quote of quotes;let i=index'>
+            <p> Created on {{quote.date|date}}</p>
+
             <div *ngIf="quote.upvotes ==highest && quote.upvotes>0;then highlight else empty"></div>
             <ng-template #highlight>
                 <li appHighlight>{{quote.quote}} <br>
+                 
                     <span class="text-primary"> Name: {{quote.name}}</span> <br>
                     <span class="text-primary"> Author: {{quote.author}}</span> <br>
-    
+                  
                     <span class="text-primary"><app-votes></app-votes></span><br>
                     
                     
