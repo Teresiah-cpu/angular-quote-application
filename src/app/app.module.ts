@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HighlightDirective } from './highlight.directive';
 import { FormComponent } from './form/form.component';
 import { FormsModule } from '@angular/forms';
+import { VotesComponent } from './votes/votes.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     QuotesComponent,
     NavbarComponent,
     HighlightDirective,
-    FormComponent
+    FormComponent,
+    VotesComponent
   ],
   imports: [
     BrowserModule,
