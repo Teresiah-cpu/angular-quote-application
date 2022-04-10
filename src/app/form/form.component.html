@@ -6,30 +6,31 @@
     
 </form> -->
 <h1>Your quote</h1>
-<form action="">
-    <div class="column">
+<form (ngSubmit)='submitQuote()'>
+    <div class="form-group">
         <label for="name">What is your name?</label>
         <div>
-            <input type="text" name="" placeholder="E.g Nelson Mandela" id="name"  name='name'
+            <input type="text" name="" placeholder="E.g Nelson Mandela" class="form-control" id="name" [(ngModel)]="addNewQuote.name" name='name'
                 >
         </div>
     </div>
 
-    <div class="column">
+    <div class="form-group">
         <label for="quote">Enter the Quote</label>
         <div>
-            <textarea name="" placeholder="Enter the quote here" id="quote" cols="20" rows="2"
-                name='theQuote' ></textarea>
+            <textarea name="" placeholder="Enter the quote here" id="quote"[(ngModel)]="addNewQuote.quote" class="form-control" cols="20" rows="2"
+                name='quote' ></textarea>
         </div>
     </div>
 
-    <div class="column">
+    <div class="form-group">
         <label for="author">Who is the author of the quote?</label>
         <div>
-            <input type="text" name="" placeholder="Enter author's name here" id="author"
+            <input type="text" name="" placeholder="Enter author's name here" class="form-control" id="author"[(ngModel)]="addNewQuote.author"
                 name='author' >
         </div>
     </div>
 
     <button type="submit">Add Quote</button>
 </form>
+

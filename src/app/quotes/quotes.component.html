@@ -2,7 +2,8 @@
 <ul *ngFor = 'let quote of quotes' >
     <div *ngIf="quote.upvotes ==highest && quote.upvotes>0;then highlight else empty" ></div>
     <ng-template #highlight>
-        <li appHighlight>{{quote.quote}} <span class="text-primary"> <button>Upvotes</button> {{quote.upvotes}}</span> <span
+        <li appHighlight>{{quote.quote}} <br>
+            <span class="text-primary"> <button>Upvotes</button> {{quote.upvotes}}</span> <span
                 class="text-warning ml-4"> <button>Downvotes</button> {{quote.downvotes}}</span> </li>
 
     </ng-template>
@@ -14,3 +15,7 @@
 
 
 </ul>
+<div class="col-md-6 mt-5 pl-3 text-white" id="cols">
+    <h2>Add Your Favourite Quote</h2>
+    <app-form (addQuote)="addNewQuote($event)"></app-form>
+</div>
